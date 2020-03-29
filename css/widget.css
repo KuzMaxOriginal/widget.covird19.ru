@@ -1,0 +1,155 @@
+:root {
+    --color-primary: #6b7682;
+    --color-secondary: #939393;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    padding: 10px;
+    min-height: 245px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bordered .wrapper {
+    border: 1px solid var(--color-secondary);
+}
+
+.covird-widget {
+    max-width: 316px;
+}
+
+.covird-widget .stats {
+    font-size: 18px;
+}
+
+.covird-widget .stats td, .covird-widget .stats th {
+    padding: 5px 5px;
+    color: #000;
+}
+
+.covird-widget .stats td:not(.country) {
+    text-align: center;
+}
+
+.covird-widget .stats th {
+    color: var(--color-primary);
+    font-weight: normal;
+}
+
+.covird-widget .stats td.country {
+    color: var(--color-primary);
+}
+
+.covird-widget .stats td.recovered {
+    color: #4bb34b;
+}
+
+.covird-widget .stats td.deaths {
+    color: #db3b3b;
+}
+
+.covird-widget .stats td span {
+    height: 1em;
+    color: var(--color-secondary);
+    display: block;
+}
+
+.covird-widget .stats th, .covird-widget .stats td.country {
+    font-size: 15px;
+}
+
+.covird-widget .widget-footer {
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    color: var(--color-primary);
+    margin-top: 20px;
+}
+
+.covird-widget .widget-footer a,
+.covird-widget .widget-footer a:hover {
+    color: var(--color-primary);
+}
+
+.covird-widget .widget-title {
+    color: var(--color-primary);
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 338px) {
+    .covird-widget .recovered {
+        vertical-align: top;
+    }
+}
+
+@media (max-width: 337px) {
+    .covird-widget table.stats,
+    .covird-widget .stats thead,
+    .covird-widget .stats tbody,
+    .covird-widget .stats th,
+    .covird-widget .stats tr,
+    .covird-widget .stats td {
+        display: block;
+    }
+
+    .covird-widget table.stats {
+        font-size: 15px;
+        display: flex;
+    }
+
+    .covird-widget .stats tbody {
+        display: flex;
+    }
+
+    .covird-widget .stats tr {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .covird-widget .stats th, .covird-widget .stats td {
+        display: flex;
+        flex-grow: 1;
+        padding: 0 !important;
+        height: 40px;
+        width: 75px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .covird-widget .stats th:nth-child(1), .covird-widget .stats td:nth-child(1) {
+        height: 50px;
+    }
+
+    .covird-widget .stats span {
+        font-size: 13px;
+    }
+
+    .covird-widget .widget-footer {
+        margin-top: 10px;
+    }
+
+    .covird-widget .widget-title {
+        margin-bottom: 10px;
+    }
+
+    .covird-widget {
+        max-width: 225px;
+    }
+}
